@@ -39,7 +39,7 @@ section{
     text-align: justify;
 }
 h1{
-    font-family: Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
 }
 h4{
@@ -52,7 +52,7 @@ p .desc{
   flex-direction: column; /* This ensures the flexbox behaves as a block element */
   align-items: center; /* This centers the text horizontally */
   margin-bottom: 100px;
-  font-family:Arial, Helvetica, sans-serif
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 a{
     text-decoration: none;
@@ -62,6 +62,8 @@ a{
     transition: all 0.3s ease-in-out;
   }
 .button {
+    width: 260px;
+    height: auto;
     position: relative;
     margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
