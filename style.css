@@ -1,12 +1,23 @@
 body{
-background-image: url(bck.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-background-size: cover;
+  background-image: url(bck.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative; /* Ensure body is positioned relative */
+  height: 100vh; /* Ensure body takes up the full viewport height */
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  z-index: -1; /* Make sure the overlay stays behind the content */
 }
 section{
-  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,13 +27,14 @@ section{
     flex-direction: column; /* Set flex direction to column */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    margin: auto;
+    margin: 20px;
     background-color: white;
-    padding: 20px 45px;
+    padding: 10px 40px;
     border-radius: 20px;
     -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
     width:380px;
+    height: 530px;
     text-align: center;
 }
 .logo-img{
@@ -46,23 +58,23 @@ h4{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 1000;
 }
-p .desc{
-  text-align: justify; /* This justifies the text */
-  display: flex; /* This sets the display property to flex */
-  flex-direction: column; /* This ensures the flexbox behaves as a block element */
-  align-items: center; /* This centers the text horizontally */
-  margin-bottom: 100px;
+.desc{
+  margin-bottom: 30px;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 a{
     text-decoration: none;
 }
-  .btn-icon{
-    max-width: 25px;
+.btn-icon{
+    width: 25px;
+    height: 25px;
+    position: absolute;
     transition: all 0.3s ease-in-out;
+    left: 20px; 
+    margin-right: 10px;
   }
 .button {
-    width: 260px;
+    width: 280px;
     height: auto;
     position: relative;
     margin-bottom: 10px;
